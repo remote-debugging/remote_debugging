@@ -1,7 +1,7 @@
-require_relative 'domain_handler/base'
-require_relative 'domain_handler/combinator'
-require_relative 'domain_handler/echo'
-require_relative 'domain_handler/logging'
+require 'remote_debugging/domain_handler/base'
+require 'remote_debugging/domain_handler/combinator'
+require 'remote_debugging/domain_handler/echo'
+require 'remote_debugging/domain_handler/logging'
 
 module RemoteDebugging
   ##

@@ -22,7 +22,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Start ruby-debugging server:
+
+    $ bundle exec bin/server
+
+Start chrome with (make sure you closed all chrome processes before):
+
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+
+Then open the following URL in chrome:
+
+    http://localhost:9222/devtools/inspector.html?ws=localhost:9223
 
 ## Development
 

@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A generic backend to the chrome remote debugging API.}
   spec.description   = %q{Provides a backend stub to the chrome remote debugging API so that you can build a remote-debuggable thing.}
-  spec.homepage      = "https://github.com/tessi/remote_debugging"
+  spec.homepage      = "https://github.com/remote-debugging/remote_debugging"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
@@ -19,8 +19,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'websocket-eventmachine-server'
-  spec.add_dependency 'json'
+  spec.add_runtime_dependency 'websocket-eventmachine-server'
+  spec.add_runtime_dependency 'json'
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"

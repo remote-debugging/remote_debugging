@@ -31,8 +31,10 @@ module RemoteDebugging
 
           ws.onmessage do |content, type|
             message = Message.from_json content, type: type
-            response = domain_handler_for(message.domain).receive(message: message).to_json
-            ws.send(response, type: type)
+            response = domain_handler_for(message.domain).receive(message: message)
+            # puts "ANSWER: #{response.inspect}"
+            answer_type = response.type || ''
+            ws.send(response.to_json, type: answer_type)
           end
 
           ws.onclose do
