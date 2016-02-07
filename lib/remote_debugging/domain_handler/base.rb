@@ -8,13 +8,12 @@ module RemoteDebugging
 
       private
 
-      def respond(to_message:, with:)
-        Message.response id: to_message.id,
-                         result: with
+      def respond(**params)
+        Message.response **params
       end
 
       def empty_response(message)
-        respond to_message: message, with: {}
+        respond id: message.id, result: {}
       end
     end
   end
