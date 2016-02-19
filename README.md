@@ -26,9 +26,9 @@ Start ruby-debugging server:
 
     $ bundle exec bin/server
 
-Start chrome with (make sure you closed all chrome processes before):
+Start chrome with and give him a separate user data dir to make it possible to run another instance of chrome:
 
-    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=<ENTER_NEW_PROFILE_PATH_HERE> --remote-debugging-port=9222
 
 Then open the following URL in chrome:
 
